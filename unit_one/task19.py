@@ -19,3 +19,4 @@ for i in range(len(algoritm)):
 
 fd.writelines(title)
 fd.writelines(new_list)
+fd.close()
