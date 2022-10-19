@@ -2,6 +2,7 @@ from random import randint as rdi
 
 game_field = []
 LIVE = 1
+access = [10, 20, 30]
 import sys
 
 
@@ -9,6 +10,20 @@ def init():
     matrix()
 
 
+def decor_access(func_menu):
+    id = int(input('Введите ID: '))
+
+    def wrapper():
+        global access
+        if id not in access:
+            sys.exit('Нет доступа')
+        else:
+            func_menu()
+
+    return wrapper
+
+
+@decor_access
 def menu():
     out = f"1. Новая игра\n2. Продолжить игру\n3. Сохранить игру\n4.Загрузить игру"
     print(out)
@@ -64,4 +79,3 @@ def game():
 
 
 menu()
-
