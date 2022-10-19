@@ -41,8 +41,6 @@ render()
 render()
 render()
 
-
-
 text_1 = f"render, {str(render.count)}, {start.strftime('%d.%m.%Y %H:%M')}"
 text_2 = f"show, {str(show.count)}, {start.strftime('%d.%m.%Y %H:%M')}"
 
