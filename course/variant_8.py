@@ -98,8 +98,8 @@ accident_date_from = input('Введите дату с: ')
 accident_date_by = input('Введите дату по: ')
 
 SQL_GET_INFO_ABOUT_CARS_WHICH_HAD_ACCIDENT_IN_CHOSEN_TIME = f"""SELECT *
-FROM auto
-WHERE accident_date BETWEEN '{accident_date_from}' AND '{accident_date_by}'"""
+                                                                FROM auto
+                                                                WHERE accident_date BETWEEN '{accident_date_from}' AND '{accident_date_by}'"""
 
 cur.execute(SQL_GET_INFO_ABOUT_CARS_WHICH_HAD_ACCIDENT_IN_CHOSEN_TIME)
 
