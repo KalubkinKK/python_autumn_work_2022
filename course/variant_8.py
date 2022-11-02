@@ -119,7 +119,7 @@ car_brand = input('Введите марку автомобиля: ')
 
 SQL_GET_INFO_ABOUT_MOST_STILLED_CARS_BY_BRAND = f"""SELECT model, count(car_accident)
                                                     FROM auto
-                                                    WHERE brand = 'KIA'
+                                                    WHERE brand = '{car_brand}'
                                                     GROUP BY model
                                                     ORDER BY count DESC"""
 
